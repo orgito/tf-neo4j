@@ -1,0 +1,38 @@
+# Copy and edit this file with your informatin
+
+# AWS Credentials
+aws_access_key = "YourAWSAccessKey"
+aws_secret_key = "YourAWSSecretKey"
+
+# Namespace, which could be your organization name or abbreviation, e.g. "co" or "company"
+namespace = "co"
+# Stage, e.g. "prod", "staging", "dev"
+stage = "prod"
+
+# Where to deploy the infrastructure
+region = "us-east-1"
+vpc = "vpc-xxxxxxxx"
+subnet = "subnet-xxxxxxxx"
+
+# Version to install (3.5.x)
+version = "3.5.2"
+
+# Initial Password. CHANGE IT!
+initial_password = "password"
+
+# Neo4j instance type
+core_instance_type = "m5.xlarge"
+replica_instance_type = "r5.large"
+
+# Neo4j cluster size
+core_count = 3
+replica_count = 3
+
+# The data volume size for each Neo4j node
+storage_size = 200
+
+# Allow loggin in the instance using you ssh key pair. The private key
+# will be used by Ansible to manage the instances.
+# https://console.aws.amazon.com/ec2/v2/home?#KeyPairs
+ssh_key_pair = "terraform"
+
