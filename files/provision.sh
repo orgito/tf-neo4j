@@ -7,8 +7,8 @@ NEO4J_ACCEPT_LICENSE_AGREEMENT=yes yum -q -y install neo4j-enterprise-${version}
 
 neo4j-admin set-initial-password ${initial_password}
 
-echo neo4j soft nofile 65000 >> /etc/security/limits.conf
-echo neo4j hard nofile 65000 >> /etc/security/limits.conf
+echo "* soft nofile 65000" >> /etc/security/limits.conf
+echo "* hard nofile 65000" >> /etc/security/limits.conf
 
 PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 
